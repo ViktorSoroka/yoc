@@ -101,6 +101,9 @@ module.exports = function (env) {
         disableHostCheck: false,
         compress: isProd,
         inline: !isProd,
+        proxy: {
+          '/api': 'http://localhost:3000'
+        },
         stats: {
           assets: false,
           children: false,
